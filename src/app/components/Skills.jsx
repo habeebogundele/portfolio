@@ -21,6 +21,16 @@ export default function Skills() {
       ]
     },
     {
+      title: "Website Builders",
+      skills: [
+        { name: "WordPress", level: 90, color: "bg-blue-400" },
+        { name: "Shopify", level: 85, color: "bg-green-500" },
+        { name: "Wix", level: 88, color: "bg-orange-500" },
+        { name: "Elementor", level: 82, color: "bg-purple-500" },
+        { name: "WooCommerce", level: 80, color: "bg-red-400" },
+      ]
+    },
+    {
       title: "Tools & Others",
       skills: [
         { name: "Git/GitHub", level: 93, color: "bg-orange-500" },
@@ -39,7 +49,7 @@ export default function Skills() {
           Skills & Technologies
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
               <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">{category.title}</h3>

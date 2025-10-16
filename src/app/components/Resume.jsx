@@ -10,18 +10,18 @@ export default function Resume() {
       technologies: ["React", "Node.js", "MongoDB", "React Native", "AWS"]
     },
     {
-      title: "Fullstack Developer",
+      title: "Fullstack Developer & CMS Specialist",
       company: "Digital Innovations LLC",
       period: "2020 - 2022",
-      description: "Developed and maintained multiple client projects using PHP/Laravel and React. Built RESTful APIs and integrated third-party services.",
-      technologies: ["PHP", "Laravel", "React", "MySQL", "REST API"]
+      description: "Developed and maintained multiple client projects using PHP/Laravel and React. Built RESTful APIs and created custom WordPress themes and Shopify stores.",
+      technologies: ["PHP", "Laravel", "React", "WordPress", "Shopify", "Wix"]
     },
     {
-      title: "Frontend Developer",
+      title: "Web Developer",
       company: "Web Creators Agency",
       period: "2019 - 2020",
-      description: "Created responsive web applications and collaborated with design teams to implement pixel-perfect UIs.",
-      technologies: ["JavaScript", "React", "CSS3", "HTML5", "Bootstrap"]
+      description: "Created responsive websites using various platforms including WordPress, Wix, and custom code solutions. Collaborated with design teams to implement pixel-perfect UIs.",
+      technologies: ["JavaScript", "React", "WordPress", "Wix", "CSS3", "HTML5"]
     }
   ]
 
@@ -38,19 +38,15 @@ export default function Resume() {
     "AWS Certified Developer - Associate",
     "MongoDB Certified Developer",
     "React Native Certification",
-    "Laravel Certified Developer"
+    "Laravel Certified Developer",
+    "WordPress Development Specialist",
+    "Shopify Expert Certification"
   ]
 
   const downloadResume = () => {
-    // Create a link element
     const link = document.createElement('a');
-    
-    // For demo purposes, we'll create a placeholder PDF
-    // In production, replace this with the actual path to your PDF file
-    link.href = '/resume.pdf'; // Make sure to put your actual resume PDF in public folder
+    link.href = '/resume.pdf';
     link.download = 'Your-Name-Fullstack-Developer-Resume.pdf';
-    
-    // Append to the document, click, and remove
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -64,7 +60,7 @@ export default function Resume() {
             Resume
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Download my complete resume to learn more about my experience, education, and qualifications.
+            Download my complete resume to learn more about my experience with custom development and popular website platforms.
           </p>
           <button
             onClick={downloadResume}
@@ -77,15 +73,15 @@ export default function Resume() {
           </button>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Experience Section */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
-              <div className="w-2 h-8 bg-blue-600 rounded-full"></div>
-              Work Experience
-            </h3>
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
+         <div className="grid lg:grid-cols-2 gap-12">
+           {/* Experience Section */}
+           <div>
+             <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+               <div className="w-2 h-8 bg-blue-600 rounded-full"></div>
+               Work Experience
+             </h3>
+             <div className="space-y-8">
+               {experiences.map((exp, index) => (
                 <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
                   <div className="flex justify-between items-start mb-3">
                     <div>
