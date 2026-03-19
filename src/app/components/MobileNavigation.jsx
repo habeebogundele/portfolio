@@ -7,15 +7,15 @@ export default function MobileNavigation() {
   if (!isMobile) return null
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 px-4 py-3">
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 px-4 py-3 dark:bg-slate-900/90 dark:border-slate-700">
       {/* Prev Button */}
       <button
         onClick={prevSection}
         disabled={currentSection === 0}
-        className={`p-2 rounded-full transition-all duration-300 ${
+        className={`interactive-btn p-2 rounded-full transition-all duration-300 ${
           currentSection === 0 
             ? 'text-gray-400 cursor-not-allowed' 
-            : 'text-blue-600 hover:bg-blue-100 hover:scale-110'
+            : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-110'
         }`}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@ export default function MobileNavigation() {
             onClick={() => goToSection(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentSection 
-                ? 'bg-blue-600 scale-125' 
+                ? 'bg-slate-700 dark:bg-slate-300 scale-125 pulse-soft' 
                 : 'bg-gray-300 hover:bg-gray-400'
             }`}
           />
@@ -42,10 +42,10 @@ export default function MobileNavigation() {
       <button
         onClick={nextSection}
         disabled={currentSection === sections.length - 1}
-        className={`p-2 rounded-full transition-all duration-300 ${
+        className={`interactive-btn p-2 rounded-full transition-all duration-300 ${
           currentSection === sections.length - 1 
             ? 'text-gray-400 cursor-not-allowed' 
-            : 'text-blue-600 hover:bg-blue-100 hover:scale-110'
+            : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-110'
         }`}
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

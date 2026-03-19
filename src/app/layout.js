@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { MobileNavigationProvider } from './contexts/MobileNavigationContext'
+import ScrollAnimator from './components/ScrollAnimator'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,8 +25,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-100`}>
         <MobileNavigationProvider>
+          <ScrollAnimator />
           {children}
         </MobileNavigationProvider>
       </body>

@@ -38,12 +38,12 @@ export default function Header() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled && !isMobile ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    } ${isMobile ? 'bg-white/95 backdrop-blur-md shadow-lg' : ''}`}>
+    } ${isMobile ? 'bg-white/95 backdrop-blur-md shadow-lg' : ''} dark:bg-slate-900/95`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a 
             href="#home" 
-            className="text-2xl font-bold text-blue-600"
+            className="interactive-link text-2xl font-bold text-black dark:text-white"
             onClick={(e) => handleNavClick(0, e)}
           >
             DevPortfolio
@@ -54,7 +54,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
+                className="interactive-link text-gray-700 hover:text-slate-700 font-medium transition-colors duration-300 dark:text-gray-200 dark:hover:text-slate-100"
                 onClick={(e) => handleNavClick(index, e)}
               >
                 {item.name}
@@ -87,7 +87,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
+                className="interactive-link block text-gray-700 hover:text-slate-700 font-medium transition-colors duration-300 dark:text-gray-200 dark:hover:text-slate-100"
                 onClick={(e) => handleNavClick(index, e)}
               >
                 {item.name}
