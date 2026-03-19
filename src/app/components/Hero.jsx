@@ -14,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className={`animate-zoom flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-black ${
+    <section id="home" className={`animate-zoom flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 ${
       isMobile ? 'min-h-screen pt-16 pb-24' : 'min-h-screen pt-16'
     }`}>
       <div className="container mx-auto px-6">
